@@ -26,47 +26,16 @@
       
   }
 
- 
-.navbar {
-    animation: fadeIn 20s;
-    -webkit-animation: fadeIn 15s;
-    -moz-animation: fadeIn 15s;
-    -o-animation: fadeIn 15s;
-    -ms-animation: fadeIn 15s;
-}
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 5;}
-}
 
-@-moz-keyframes fadeIn{
-    0% {opacity: 0;}
-    100% {opacity: 5;}
-}
-
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 5;}
-}
-
-@-o-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 5;}
-}
-
-@-ms-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 5;}
-}
 
 
 
 body {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #161623;
+    background-color: #000;
     min-height: 108vh;
 }
 
@@ -82,7 +51,7 @@ section::before {
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(#f00, #f0f);
+    background: linear-gradient(#f00, #000);
     clip-path: circle(25% at right 68%);
 }
 
@@ -93,7 +62,7 @@ section::after {
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(#2196f3, #e91e63);
+    background: linear-gradient(#000, #f00);
     clip-path: circle(20% at 10% 10%);
 }
 
@@ -104,7 +73,7 @@ section::after {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 40px 0;
+    margin: ;
 }
 
 .container .card {
@@ -133,12 +102,14 @@ section::after {
 }
 
 .container .card .sci {
+    
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
     display: flex;
 }
 
 .container .card .sci li {
+    
     list-style: none;
     margin: 0 10px;
     transform: translateY(40px);
@@ -153,6 +124,7 @@ section::after {
 }
 
 .container .card .sci li a {
+    
     color: #fff;
     font-size: 24px;
 }
@@ -206,3 +178,63 @@ section::after {
     object-fit: cover;
 }
 
+.footer {
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
