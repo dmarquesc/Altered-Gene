@@ -10,6 +10,32 @@ body {
     height: 100vh;
 }
 
+section {
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#f00, #000);
+    clip-path: circle(25% at right 68%);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#000, #f00);
+    clip-path: circle(20% at 10% 10%);
+}
+
 .contact-container {
     position: relative;
     display: flex;
@@ -49,7 +75,7 @@ body {
     
     height: 100%;
     width: 100%;
-    background: url(portfolioimage.png) no-repeat center;
+    background: url(foreverlost.jpg) no-repeat center;
     
 }
 
@@ -122,19 +148,24 @@ h2:after {
     }
 
     .left {
-        height: 200px;
+        height: 400px;
+       margin-top: 50px;
     }
 }
 
 .footer {
+   
     padding: 40px 0;
     background-color: #000;
+   
 }
 
 .footer .social {
     text-align: center;
+    padding-top: 100px;
     padding-bottom: 25px;
     color: #fff;
+    
 }
 
 .footer .social a {
