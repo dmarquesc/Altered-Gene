@@ -10,7 +10,7 @@
                 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
                 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="port.css">
                 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
@@ -56,14 +56,94 @@
 </nav>
 
 <section>
+  <!-- Home Banner==========================-->
+
+  <div class="banner">
+    <div class="bg">
+      <div class="banner-content">
+        <h2>We Make Games</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <a href="#" class="btn">Join Now</a>
+      </div>
+      <img src="portfolioimage.png" alt="image of 2 animated women">
+    </div>
+  </div>
+
+  <!-- About Section=========================-->
+
+  <div class="about">
+    <div class="contentBx">
+      <h2>About Us</h2>
+      <p>Altered Gene is a remote development studio headquartered in the UK. Our mission is to craft omni-channel games and experiences using the core pillars of story, quality and accessibility.<br>
+
+        <p>The team is currently working on building a story-verse spanning five individual projects.</p><br>
+        
+        <h3>Production consultancy</h3><br>
+
+        <p>We can share decades of advice with you on all aspects of game development. We can also manage relationships with platform holders and or publishers on your behalf.</p>
+      <a href="https://www.alteredgene.co.uk/about.html">Read More</a>
+    </div>
+    <img src="red_car_mobile.png" alt="Image of 3d car in mobile phone">
+  </div>
+
+  <!-- Games Section =================================-->
+<section>
   
+  <div class="games">
+    <h2>Popular Games</h2>
+    <ul>
+      <li class="list active" data-filter="all">All</li>
+      <li class="list" data-filter="pc">Pc Games</li>
+      <li class="list" data-filter="mobile">Mobile Games</li>
+    </ul>
+    <div class="cardBx">
+      <div class="card" data-item="mobile">
+        <img src="foreverlost.jpg" alt="Image of foreverlost">
+        <div class="content">
+          <h4>FOREVER lOST</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing<br><span>$TBD</span></p>
+            <a href="https://store.steampowered.com/app/1662700/Forever_Lost/">Play Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-item="pc">
+        <img src="theanalyst.png" alt="Image of foreverlost">
+        <div class="content">
+          <h4>THE ANALYST</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing<br><span>$TBD</span></p>
+            <a href="https://store.steampowered.com/app/880790/The_Analyst/">Play Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-item="pc">
+        <img src="hyperstellar.png" alt="Image of foreverlost">
+        <div class="content">
+          <h4>HYPERSTELLAR</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing<br><span>$TBD</span></p>
+            <a href="https://www.alteredgene.co.uk/hyperstellar.html">Play Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </section>
   
 <section class="footer">
   <div class="social">
-    <a href=""><i class="bi bi-facebook"></i></a>
+    <a href="https://www.facebook.com/alteredgenegames"><i class="bi bi-facebook"></i></a>
     <a href=""><i class="bi bi-instagram"></i></a>
-    <a href=""><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/altered_gene"><i class="bi bi-twitter"></i></a>
     <a href=""><i class="bi bi-youtube"></i></a>
   </div>
 
@@ -81,10 +161,37 @@
 
 
 
+<!-- Filterable Cards====================================-->
+<script>
+    let list = document.querySelectorAll(".list");
+    let card = document.querySelectorAll(".card");
+
+    for(let i = 0; i<list.length; i++) {
+      list[i].addEventListener("click", function() {
+          for(let j=0; j<list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          this.classList.add("active");
+
+          let dataFilter = this.getAttribute("data-filter");
+
+          for( let k=0; k<card.length; k++)
+          {
+              card[k].classList.remove("active");
+              card[k].classList.add("hide");
+
+              if(card[k].getAttribute("data-item") == dataFilter || dataFilter == "all") {
+                card[k].classList.remove("hide");
+                card[k].classList.add("active");
+              }
+          }
+      })
+    }
+</script>
 
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
    
 
 </html> 
