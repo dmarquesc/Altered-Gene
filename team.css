@@ -78,8 +78,8 @@ section::after {
 
 .container .card {
     position: relative;
-    width: 260px;
-    height: 400px;
+    width: 100%;
+    height: 500px;
     background: rgba(255, 255, 255, 0.06);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     margin: 20px;
@@ -162,8 +162,8 @@ section::after {
 
 .container .card .content .imgBx {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     border: 10px solid rgba(0, 0, 0, 0.25);

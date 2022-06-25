@@ -9,6 +9,25 @@ body {
     background: #000;
 }
 
+/*NAV BAR*/
+  
+.navbar {
+    min-height: 90px;
+    background-color: black !important;
+   -webkit-box-shadow: 0 8px 6px -6px black;
+   -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;  
+      top: 0;
+      
+  }
+
 section {
     position: relative;
 }
@@ -22,7 +41,7 @@ section::before {
     left: 0;
     background: linear-gradient(#f00, #000);
     clip-path: circle(25% at right 68%);
-    
+    z-index: -1;
 }
 
 section::after {
@@ -34,6 +53,7 @@ section::after {
     left: 0;
     background: linear-gradient(#000, #f00);
     clip-path: circle(20% at 10% 10%);
+    z-index: -1;
 }
 
 .blog-section {
@@ -68,14 +88,27 @@ margin: 20px auto;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     margin: 25px auto;
+    margin-left: -40px;
 }
 
 .blog-section .section-content .cards .card {
+    position: relative;
     width: 100%;
-    background-color: #f7f7f7;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px) saturate(180%);
+    text-align: center;
 }
 
 .blog-section .section-content .cards .card img {
+
     width: 100%;
     height: auto;
 }
@@ -143,6 +176,7 @@ margin: 20px auto;
     text-align: center;
     padding-bottom: 25px;
     color: #fff;
+    z-index: 10;
 }
 
 .footer .social a {

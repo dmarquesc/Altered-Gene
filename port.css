@@ -12,33 +12,15 @@ body {
     
 }
 
+
+
 /* Home Banner Section */
 
 section {
     position: relative;
 }
 
-section::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(#f00, #000);
-    clip-path: circle(25% at right 68%);
-}
 
-section::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(#000, #f00);
-    clip-path: circle(20% at 10% 10%);
-}
 
 .banner {
     position: relative;
@@ -131,6 +113,7 @@ section::after {
 .about .contentBx {
     width: 100%;
     margin: 20px;
+   
 }
 
 .about .contentBx h2, h3 {
@@ -157,6 +140,7 @@ section::after {
     border-radius: 5px;
     color: #fff;
     letter-spacing: 1px;
+    
 }
 
 .about .contentBx a:hover {
@@ -218,16 +202,23 @@ section::after {
 }
 
 .games .cardBx .card {
-    width: 580px;
-    border-radius: 10px;
-    margin: 20px 40px;
-    background: #aaa;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px) saturate(180%);
 }
 
 .games .cardBx .card img {
     width: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
 .games .cardBx .card .content {
@@ -287,7 +278,7 @@ section::after {
 .games .cardBx .card .info a {
     display: inline-block;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
     border: 1px solid #1aeeef;
     text-decoration: none;
     font-weight: 700;

@@ -10,6 +10,25 @@ body {
     height: 100vh;
 }
 
+/*NAV BAR*/
+  
+.navbar {
+    min-height: 90px;
+    background-color: black !important;
+   -webkit-box-shadow: 0 8px 6px -6px black;
+   -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;  
+      top: 0;
+      
+  }
+
 section {
     position: relative;
 }
