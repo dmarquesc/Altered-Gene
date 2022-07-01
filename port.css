@@ -12,6 +12,23 @@ body {
     
 }
 
+.navbar {
+    min-height: 90px;
+    background-color: black !important;
+   -webkit-box-shadow: 0 8px 6px -6px black;
+   -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;  
+      top: 0;
+      
+  }
+
 
 
 /* Home Banner Section */
@@ -307,6 +324,11 @@ section {
 
 /* Footer Section */
 
+.news {
+    font-size: 24px;
+    color: #e84118;
+}
+
 .footer {
     padding: 40px 0;
     background-color: #000;
@@ -367,3 +389,48 @@ section {
     font-size: 13px;
     color: #aaa;
 }
+
+/* COOKIES SECTION */
+
+.wrapper {
+    padding: 32px;
+    }
+    
+    .cookie-container {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        background: #2f3640;
+        color: #f5f6fa;
+        padding: 0 32px;
+        transition: 400ms;
+        box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+        z-index: 999;
+    }
+    
+    .cookie-container.active {
+        bottom: 0;
+    }
+    
+    .cookie-container a {
+        color: #f5f6fa;
+    }
+    
+    .cookie-btn {
+        background: #e84118;
+        border: 0;
+        color: #f5f6fa;
+        padding: 12px 48px;
+        font-size: 18px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    
+    .cookie-text {
+       margin: 24px 0;
+       line-height: 2;
+    }
+    
