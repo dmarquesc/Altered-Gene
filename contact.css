@@ -1,4 +1,58 @@
-* {
+#hero {
+    height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0 ,0, 0, 0.5);
+    z-index: 10;
+}
+
+
+#hero video {
+    padding-top: px;
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+    justify-content: center;
+}
+
+
+#hero .texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: url("cross-stripes.png");
+}
+
+#hero .caption {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+
+
+
+/* Section 2*/
+ {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,7 +73,7 @@ body {
    -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
       position: relative;
-      z-index: 2;
+      z-index: 999;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,27 +87,7 @@ section {
     position: relative;
 }
 
-section::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(#f00, #000);
-    clip-path: circle(25% at right 68%);
-}
 
-section::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(#000, #f00);
-    clip-path: circle(20% at 10% 10%);
-}
 
 .contact-container {
     position: relative;
@@ -73,7 +107,7 @@ section::after {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(foreverlost.jpg) no-repeat center;
+    background: url(agvid.mp4) no-repeat center;
     background-size: cover;
     z-index: -1;
     filter: blur(20px);
@@ -82,24 +116,23 @@ section::after {
 .contact-box {
     max-width: 850px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #000;
+    background: linear-gradient(255, 255, 255, 0.1, rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid (255, 255, 255, 0.18);
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 }
 
-.left {
-    
-    height: 100%;
-    width: 100%;
-    background: url(foreverlost.jpg) no-repeat center;
-    
-}
+
 
 .right {
     padding: 25px 40px;
+    
 }
 
 h2 {
@@ -123,13 +156,14 @@ h2:after {
 
 .field {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: ;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: rgba(230, 230, 230, 0.6);
     font-size: 1.1rem;
     margin-bottom: 22px;
     transition: .3s;
+    
 }
 
 .field:hover {
@@ -180,7 +214,7 @@ h2:after {
 }
 
 .footer {
-   
+   margin-top: -100px;
     padding: 40px 0;
     background-color: #000;
    
