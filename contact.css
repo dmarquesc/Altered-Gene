@@ -121,8 +121,8 @@ section {
     align-items: center;
     text-align: center;
     background: linear-gradient(255, 255, 255, 0.1, rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px); 
+    -webkit-backdrop-filter: blur(2px);
     border-radius: 20px;
     border: 1px solid (255, 255, 255, 0.18);
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
